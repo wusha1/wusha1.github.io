@@ -30,7 +30,7 @@ p {
 }
 
 p:hover {
-    color: #00004d;
+    color: white;
     transition: transform 1s;
     transform: scale(1.01);
 }
