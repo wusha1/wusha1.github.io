@@ -35,12 +35,6 @@ p:hover {
     transform: scale(1.01);
 }
 
-/* Keep intro text readable over the video overlay */
-.Video_Text p:hover,
-.Video_Text q:hover {
-    color: #fff;
-}
-
 .center {
     text-align: center;
 }
