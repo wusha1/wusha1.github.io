@@ -20,6 +20,15 @@ h1:hover {
     color: #fff;
 }
 
+#About a {
+    color: #d8a0ff;      /* soft purple */
+    text-decoration: underline;
+}
+
+#About a:hover {
+    color: white;
+}
+
 p {
     font-family: Perpetua, Rockwell Extra Bold;
     text-align: justify;
@@ -30,7 +39,7 @@ p {
 }
 
 p:hover {
-    color: white;
+    color: #00004d;
     transition: transform 1s;
     transform: scale(1.01);
 }
@@ -191,6 +200,17 @@ footer {
     background-color: #f2f2f2;
 }
 
+#GitHub .Column_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertical center */
+    align-items: center;
+    /* horizontal center */
+    text-align: center;
+    /* center the text */
+}
+
 @media screen and (max-width: 576px) {
     .Column_1 {
         overflow: auto;
@@ -263,4 +283,212 @@ form {
     background-color: #f2f2f2;
     padding: 10px;
     font-family: "Trebuchet MS", Optima;
+}
+
+/*SLIDESHOW-IMAGES AND BOX*/
+
+#Slideshow_Background {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 30px 0 50px 0;
+}
+
+#Slideshow_Container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.Slideshow_Images {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    border-radius: 0px;
+    filter: grayscale(30%);
+}
+
+.Slideshow_Images:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+    transition: transform 0.8s;
+}
+
+.Previous,
+.Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.Previous:hover,
+.Next:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.text {
+    color: white;
+    left: 0;
+    font-size: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #Slideshow_Container {
+        width: 95%;
+    }
+
+    .Slideshow_Images {
+        height: 250px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+}
+
+/*POP-UP CONTACT BOX*/
+
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    padding: 18px 45px;
+    /* bigger button */
+    font-size: 18px;
+    /* larger text */
+    letter-spacing: 2px;
+    /* more spacing between letters */
+
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.Pop_Up_Button:hover {
+    background-color: white;
+    color: black;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    border: 3px solid #f1f1f1;
+    z-index: 30;
+    background-color: white;
+    border-radius: 10px;
+    width: 320px;
+}
+
+.form-container {
+    max-width: 320px;
+    padding: 16px;
+}
+
+.form-container input[type=text],
+.form-container input[type=email] {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0 14px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-container .btn {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.form-container .btn:hover {
+    background-color: #444;
+}
+
+.form-container .cancel {
+    background-color: darkred;
+}
+
+.form-container .cancel:hover {
+    background-color: #7a0000;
+}
+
+@media screen and (max-width: 576px) {
+    .form-popup {
+        width: 90%;
+        right: 5%;
+        bottom: 90px;
+    }
+
+    .form-container {
+        max-width: 100%;
+    }
 }
