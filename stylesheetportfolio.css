@@ -7,7 +7,8 @@ h1 {
     font-family: "Trebuchet MS", Optima;
     text-align: center;
     margin-top: 3%;
-    color: #ffffff; /* changed to stay readable on dark panels */
+    color: #ffffff;
+    /* changed to stay readable on dark panels */
 }
 
 h1:hover {
@@ -21,7 +22,8 @@ h1:hover {
 }
 
 #About a {
-    color: #d8a0ff;      /* soft purple */
+    color: #d8a0ff;
+    /* soft purple */
     text-decoration: underline;
 }
 
@@ -36,7 +38,8 @@ p {
     font-size: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    color: #ffffff; /* keeps text readable on dark panels */
+    color: #ffffff;
+    /* keeps text readable on dark panels */
 }
 
 p:hover {
@@ -55,7 +58,8 @@ p:hover {
 }
 
 a {
-    color: #8ab4ff; /* nicer on dark background than pure blue */
+    color: #8ab4ff;
+    /* nicer on dark background than pure blue */
 }
 
 q {
@@ -87,7 +91,8 @@ img:hover {
 
 footer {
     padding: 2%;
-    background-color: #1a1a1a; /* was white */
+    background-color: #1a1a1a;
+    /* was white */
     color: white;
 }
 
@@ -203,7 +208,8 @@ footer a {
     padding: 10px;
     padding-top: 3%;
     min-height: 400px;
-    background-color: #1e1e1e; /* was #f2f2f2 (light) */
+    background-color: #1e1e1e;
+    /* was #f2f2f2 (light) */
     color: white;
 }
 
@@ -230,7 +236,8 @@ footer a {
     padding: 10px;
     padding-top: 1.9%;
     min-height: 400px;
-    background-color: #2a2a2a; /* slightly darker than old #4d4d4d */
+    background-color: #2a2a2a;
+    /* slightly darker than old #4d4d4d */
     color: white;
 }
 
@@ -288,7 +295,8 @@ input[type=submit]:hover {
 
 form {
     border-radius: 5px;
-    background-color: #1e1e1e; /* was #f2f2f2 (light) */
+    background-color: #1e1e1e;
+    /* was #f2f2f2 (light) */
     padding: 10px;
     font-family: "Trebuchet MS", Optima;
     color: white;
@@ -500,4 +508,28 @@ form {
     .form-container {
         max-width: 100%;
     }
+}
+
+/* Projects Section */
+#Projects h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#Projects h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#Projects p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+#Projects h3,
+#Projects p {
+    margin-left: 20px;
+    margin-right: 20px;
 }
