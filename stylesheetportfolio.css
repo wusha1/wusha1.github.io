@@ -598,3 +598,21 @@ form {
         font-size: 14px;
     }
 }
+/* Hyperlink colors */
+a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #80c1ff;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #4da6ff;
+}
+
+a:active {
+    color: #80c1ff;
+}
