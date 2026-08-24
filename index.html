@@ -4,240 +4,525 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
 
-    <link rel="stylesheet" type="text/css" href="stylesheetportfolio.css">
+    <title>Victor Andrade | Portfolio</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="Stylesheets.css">
 </head>
 
-<body class="Background">
+<body>
 
-    <!-- Navbar -->
-    <div class="Navbar">
-        <a class="active" href="#Home">Home</a>
-        <a href="#Slideshow">Slideshow</a>
-        <a href="#About">About</a>
-        <a href="#Projects">Projects</a>
-        <a href="#GitHub">GitHub</a>
-        <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
-    </div>
+    <!-- =========================
+         LEFT SIDEBAR
+    ========================== -->
+    <header id="sidebar">
 
-    <br>
-    <br>
-
-    <!-- Home / Video -->
-    <div id="Home">
-        <video autoplay muted loop id="Background_Video">
-            <source src="videos/video-1.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Video text -->
-    <div class="Video_Text">
-        <h1 class="white-text">Victor Andrade's Portfolio</h1>
-        <strong>
-            <p class="center">
-                <q>
-                    The computer programmer is a creator of universes for which he alone is the lawgiver.
-                    <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute
-                    authority to arrange a stage or
-                    <br>field of battle and to command such unswervingly dutiful actors or troops.
-                </q>
-                <br> -Joseph Weizenbaum
-                <br><br>
-                My name is Victor Andrade. Welcome to my portfolio website. On it, I will tell you about my background
-                and experience.
-                <br><br>
-                Thank you for stopping by and enjoy!
-            </p>
-        </strong>
-    </div>
-
-    <!-- Slideshow section -->
-    <div id="Slideshow">
-        <div id="Slideshow_Background">
-            <div id="Slideshow_Container">
-
-                <!-- Slide 1 -->
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images" src="images/professional-photo.png" alt="Victor professional photo">
-                    <div class="text">I'm Victor Andrade — ready to help on your next project!</div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images logo-slide" src="images/html-js-css.png" alt="HTML CSS JavaScript">
-                    <div class="text">Front-end development with<br>HTML, CSS, and JavaScript</div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images" src="images/python.png" alt="Python">
-                    <div class="text">Python for scripting and backend logic</div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images logo-slide" src="images/csharp-net.png" alt="C# and .NET">
-                    <div class="text">C#, .NET, ASP.NET, and MVC</div>
-                </div>
-
-                <!-- Slide 5 -->
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images logo-slide" src="images/sql-database.png" alt="SQL and Databases">
-                    <div class="text">Databases and SQL</div>
-                </div>
-
-                <!-- Slide 6 -->
-                <div class="mySlides fade">
-                    <img class="Slideshow_Images" src="images/general-coding.png" alt="Coding background">
-                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
-                </div>
-
-                <!-- Previous and next buttons -->
-                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-
-            <br>
-
-            <!-- Dots -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- About section -->
-    <div class="Row" id="About">
-        <div class="Column_2">
-            <img src="images/about-image.jpg" alt="About Me">
-        </div>
-        <div class="Column_1">
-            <h1>About</h1>
-            <p>
-                Hi, I'm Victor. I'm a technology student and real estate professional with a growing
-                passion for software development and game development.
-                <br><br>
-
-                Through my coursework and personal projects, I've gained experience working with
-                HTML, CSS, JavaScript, C#, C++, Unity, Unreal Engine, Git, and GitHub. I enjoy building interactive
-                applications, expanding my programming skills, and continuously learning new
-                technologies while creating practical and engaging projects.
-                <br><br>
-
-                My goal is to continue growing as a developer by building meaningful software and
-                game projects that combine creativity, problem-solving, and a commitment to
-                lifelong learning.
-
-                Feel free to
-                <a href="#Contact" class="contact">contact me</a>!
-
-                <br><br>
-
-                <a href="Documents/Victor-Andrade-Resume.pdf" target="_blank">
-                     View Resume
-                </a>
-
-                &nbsp; | &nbsp;
-
-                <a href="Documents/Victor-Andrade-Resume.pdf" download>
-                     Download Resume
-                </a>
-
-                &nbsp; | &nbsp;
-
-                <a href="https://www.linkedin.com/in/victor-andrade-6a0864397/" target="_blank">
-                     LinkedIn
-                </a>
-            </p>
-        </div>
-    </div>
-
-    <!-- Projects section -->
-    <div class="Row" id="Projects">
-        <div class="Column_2">
-            <img src="images/general-coding.png" alt="Programming Projects">
+        <!-- Temporary Profile Image Placeholder -->
+        <div class="profile-image">
+            <img src="Images/Portfoliopro.png" alt="Victor Andrade">
         </div>
 
-        <div class="Column_1">
-            <h1>Projects</h1>
+        <!-- Name -->
+        <h1 class="site-name">Victor Andrade</h1>
 
-            <h3>Unity Pac-Man Game</h3>
-            <p>
-                Developed a Pac-Man-inspired game in Unity using C#. Features include multiple levels,
-                collectible pellets, enemy AI, sound effects, and win/lose conditions.
-            </p>
+        <!-- Social Links -->
+        <div class="social-links">
 
-            <h3>Unreal Engine C++ Win Condition</h3>
-            <p>
-                Built a simple Unreal Engine 5 game using C++. The player wins by reaching a trigger
-                that displays a victory message and ends the game, demonstrating gameplay programming
-                with Unreal Engine and C++.
-            </p>
-        </div>
-    </div>
-
-    <!-- GitHub section -->
-    <div class="Row" id="GitHub">
-        <div class="Column_1">
-            <h1>GitHub</h1>
-            <p>
-                You can view my coding projects on my GitHub profile here:
-            </p>
-            <p class="center">
-                <a href="https://github.com/wusha1" target="_blank" rel="noopener">My GitHub</a>
-            </p>
-        </div>
-        <div class="Column_2">
-            <a href="https://github.com/wusha1" target="_blank" rel="noopener">
-                <img src="images/github_logo.png" alt="GitHub-Logo">
+            <a href="https://wusha1.github.io/#Home" aria-label="GitHub">
+                <i class="bi bi-github"></i>
             </a>
+
+            <a href="https://www.linkedin.com/in/victor-andrade-6a0864397/1" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+            </a>
+
         </div>
-    </div>
 
-    <!-- Contact popup -->
-    <div id="Contact">
-        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
 
-        <div class="form-popup" id="myForm" ondblclick="closeForm()">
-            <form action="https://formspree.io/f/xbddgzww" method="POST" class="form-container">
-                <h1>Contact</h1>
+            <ul>
 
-                <label for="name"><b>Name</b></label>
-                <input type="text" placeholder="Type your name here" name="name" required>
+                <li>
+                    <a href="#home" class="active">
+                        <i class="bi bi-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
 
-                <label for="phone"><b>Phone</b></label>
-                <input type="text" placeholder="Type your phone number here" name="phone">
+                <li>
+                    <a href="#about">
+                        <i class="bi bi-person"></i>
+                        <span>About</span>
+                    </a>
+                </li>
 
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Type your email address here" name="email" required>
+                <li>
+                    <a href="#resume">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <span>Resume</span>
+                    </a>
+                </li>
 
-                <label for="message"><b>Message</b></label>
-                <input type="text" placeholder="Type your message here" name="message">
+                <li>
+                    <a href="#portfolio">
+                        <i class="bi bi-images"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
 
-                <button type="submit" class="btn">SUBMIT</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
-            </form>
-        </div>
-    </div>
+                <li>
+                    <a href="#skills">
+                        <i class="bi bi-code-slash"></i>
+                        <span>Skills</span>
+                    </a>
+                </li>
 
-    <!-- Footer -->
-    <footer>
-        <p class="center">
-            &copy; Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank"
-                rel="noopener">The Tech Academy</a>
-        </p>
-        <br>
+                <li>
+                    <a href="#contact">
+                        <i class="bi bi-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+        </section>
+        <!-- about -->
+        <section id="about" class="about reveal">
+            <div class="section-heading">
+                <h2>About</h2>
+                <div class="heading-line"></div>
+
+                <p>
+                    Software developer with a passion for building interactive applications,
+                    websites, and games.
+                </p>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-image">
+                    <img src="Images/Techy.png" alt="Victor Andrade - Software Developer">
+                </div>
+
+                <div class="about-info">
+                    <h2>Software Developer</h2>
+
+                    <p>
+                        I enjoy turning ideas into working projects and continuing to grow
+                        my skills through hands-on development.
+                    </p>
+
+                    <div class="about-details">
+
+                        <div>
+                            <p><strong>Location:</strong> Washington</p>
+                            <p><strong>Website:</strong> wusha1.github.io</p>
+                            <p><strong>Focus:</strong> Software Development</p>
+                        </div>
+
+                        <div>
+                            <p><strong>Interests:</strong> Game Development</p>
+                            <p><strong>Availability:</strong> Open to Opportunities</p>
+                            <p><strong>Education:</strong> The Tech Academy</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- skills -->
+        <section id="skills" class="skills reveal">
+            <div class="section-heading">
+                <h2>Skills</h2>
+                <div class="heading-line"></div>
+
+                <p>
+                    Technologies and tools I have worked with through hands-on projects and development.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-item">
+                    <i class="bi bi-filetype-html"></i>
+                    <span>HTML</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="bi bi-filetype-css"></i>
+                    <span>CSS</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="bi bi-filetype-js"></i>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="bi bi-code-slash"></i>
+                    <span>C#</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="bi bi-code-slash"></i>
+                    <span>C++</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="bi bi-controller"></i>
+                    <span>Unity</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="bi bi-controller"></i>
+                    <span>Unreal Engine</span>
+                </div>
+
+                <div class="skill-item">
+                    <i class="bi bi-git"></i>
+                    <span>Git / GitHub</span>
+                </div>
+
+            </div>
+        </section>
+        <!-- resume -->
+        <section id="resume" class="resume reveal">
+            <div class="section-heading">
+                <h2>Resume</h2>
+                <div class="heading-line"></div>
+
+                <p>
+                    A quick overview of my education, training, and development experience.
+                </p>
+            </div>
+
+            <div class="resume-grid">
+
+                <div class="resume-column">
+                    <h3>Education</h3>
+
+                    <div class="resume-item">
+                        <h4>The Tech Academy</h4>
+                        <span>Software Development Bootcamp</span>
+
+                        <p>
+                            Hands-on training in software development, web development,
+                            C#, C++, Unity, Unreal Engine, Git, and project-based development.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="resume-column">
+                    <h3>Experience</h3>
+
+                    <div class="resume-item">
+                        <h4>Software Development Projects</h4>
+                        <span>Project-Based Experience</span>
+
+                        <p>
+                            Built and completed multiple software, web, and game development
+                            projects using technologies such as C#, C++, JavaScript, Unity,
+                            Unreal Engine, HTML, CSS, and Git.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- portfolio -->
+            <section id="portfolio" class="portfolio reveal">
+                <div class="section-heading">
+                    <h2>Portfolio</h2>
+                    <div class="heading-line"></div>
+
+                    <p>
+                        A collection of projects I built while learning and working with
+                        software, web, and game development.
+                    </p>
+                </div>
+
+                <div class="portfolio-filters">
+                    <button class="active">All</button>
+                    <button>Game Development</button>
+                    <button>Web Development</button>
+                    <button>Software</button>
+                </div>
+
+                <div class="portfolio-grid">
+
+                    <!-- Pac-Man -->
+                    <div class="portfolio-item" data-category="game">
+                        <img src="Images/Pacman.png" alt="Unity Pac-Man game">
+
+                        <div class="portfolio-info">
+                            <span class="project-label">Game Development</span>
+
+                            <div class="portfolio-actions">
+                                <button class="preview-btn" type="button" aria-label="Preview Unity Pac-Man project">
+                                    <i class="bi bi-zoom-in"></i>
+                                </button>
+
+                                <a href="#" class="details-link" aria-label="View Unity Pac-Man project details">
+                                    <i class="bi bi-link-45deg"></i>
+                                </a>
+                            </div>
+
+                            <div class="project-text">
+                                <h3>Unity Pac-Man Game</h3>
+                                <p>Unity / C#</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unreal Engine Live Project -->
+                    <div class="portfolio-item" data-category="game">
+                        <img src="Images/Sandbox-game.png" alt="Unreal Engine sandbox game">
+
+                        <div class="portfolio-info">
+                            <span class="project-label">Game Development</span>
+
+                            <div class="portfolio-actions">
+                                <button class="preview-btn" type="button"
+                                    aria-label="Preview Unreal Engine Live Project">
+                                    <i class="bi bi-zoom-in"></i>
+                                </button>
+
+                                <a href="project-details.html?project=unreal-live" class="details-link"
+                                    aria-label="View Unreal Engine Live Project details">
+                                    <i class="bi bi-link-45deg"></i>
+                                </a>
+                            </div>
+
+                            <div class="project-text">
+                                <h3>Unreal Engine Live Project</h3>
+                                <p>Unreal Engine / Blueprints</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Planetary Unity Project -->
+                    <div class="portfolio-item" data-category="game">
+                        <img src="Images/Planetary-Unity.png" alt="Unity planetary project">
+
+                        <div class="portfolio-info">
+                            <span class="project-label">Game Development</span>
+
+                            <div class="portfolio-actions">
+                                <button class="preview-btn" type="button" aria-label="Preview Planetary Unity Project">
+                                    <i class="bi bi-zoom-in"></i>
+                                </button>
+
+                                <a href="project-details.html?project=planetary-unity" class="details-link"
+                                    aria-label="View Planetary Unity Project details">
+                                    <i class="bi bi-link-45deg"></i>
+                                </a>
+                            </div>
+
+                            <div class="project-text">
+                                <h3>Planetary Unity Project</h3>
+                                <p>Unity / C#</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cinema Website -->
+                    <div class="portfolio-item" data-category="web">
+                        <img src="Images/Cinemas-site.png" alt="Cinema website project">
+
+                        <div class="portfolio-info">
+                            <span class="project-label">Web Development</span>
+
+                            <div class="portfolio-actions">
+                                <button class="preview-btn" type="button" aria-label="Preview Cinema Website">
+                                    <i class="bi bi-zoom-in"></i>
+                                </button>
+
+                                <a href="project-details.html?project=cinema-website" class="details-link"
+                                    aria-label="View Cinema Website details">
+                                    <i class="bi bi-link-45deg"></i>
+                                </a>
+                            </div>
+
+                            <div class="project-text">
+                                <h3>Cinema Website</h3>
+                                <p>HTML / CSS / JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- First Unity Game -->
+                    <div class="portfolio-item" data-category="game">
+                        <img src="Images/1st game-Unity.png" alt="First Unity game project">
+
+                        <div class="portfolio-info">
+                            <span class="project-label">Game Development</span>
+
+                            <div class="portfolio-actions">
+                                <button class="preview-btn" type="button" aria-label="Preview First Unity Game">
+                                    <i class="bi bi-zoom-in"></i>
+                                </button>
+
+                                <a href="project-details.html?project=first-unity-game" class="details-link"
+                                    aria-label="View First Unity Game details">
+                                    <i class="bi bi-link-45deg"></i>
+                                </a>
+                            </div>
+
+                            <div class="project-text">
+                                <h3>First Unity Game</h3>
+                                <p>Unity / C#</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Maze Project -->
+                    <div class="portfolio-item" data-category="software">
+                        <img src="Images/maze-proj.png" alt="Maze programming project">
+
+                        <div class="portfolio-info">
+                            <span class="project-label">Software</span>
+
+                            <div class="portfolio-actions">
+                                <button class="preview-btn" type="button" aria-label="Preview Maze Project">
+                                    <i class="bi bi-zoom-in"></i>
+                                </button>
+
+                                <a href="project-details.html?project=maze-project" class="details-link"
+                                    aria-label="View Maze Project details">
+                                    <i class="bi bi-link-45deg"></i>
+                                </a>
+                            </div>
+
+                            <div class="project-text">
+                                <h3>Maze Project</h3>
+                                <p>Programming Project</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- contact -->
+            <section id="contact" class="contact reveal">
+                <div class="section-heading">
+                    <h2>Contact</h2>
+                    <div class="heading-line"></div>
+
+                    <p>
+                        Feel free to reach out if you would like to connect or discuss an opportunity.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Washington</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>
+                                    <a href="mailto:allcompass11@outlook.com">allcompass11@outlook.com</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-linkedin"></i>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <p>
+                                    <a href="https://www.linkedin.com/in/victor-andrade-6a0864397/" target="_blank">View
+                                        my LinkedIn</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="bi bi-github"></i>
+                            <div>
+                                <h3>GitHub</h3>
+                                <p>
+                                    <a href="https://wusha1.github.io/#Home" target="_blank">View my GitHub</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <form class="contact-form">
+
+                    <div class="form-row">
+
+                        <div>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name">
+                        </div>
+
+                        <div>
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="8"></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+                </div>
+            </section>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Victor Andrade. All rights reserved.</p>
     </footer>
+    <!-- image preview -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" type="button" aria-label="Close image">
+            <i class="bi bi-x-lg"></i>
+        </button>
 
-    <!-- JavaScript -->
-    <script src="JS/portfolio.js" defer></script>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Project preview">
 
+            <p id="lightbox-title"></p>
+        </div>
+    </div>
+    <script src="JS/Portfolio2.js"></script>
 </body>
 
 </html>

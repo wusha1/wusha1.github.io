@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Details | Victor Andrade</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="Stylesheets.css">
+</head>
+
+<body>
+
+    <main class="project-details-page">
+
+        <section class="project-details">
+
+            <div class="project-gallery">
+                <img id="project-slide" src="Images/Pacman.png" alt="Unity Pac-Man project">
+
+                <div class="project-dots">
+                    <button class="dot active" data-image="Images/Pacman.png"></button>
+                    <button class="dot" data-image="Images/Pacman2.png"></button>
+                    <button class="dot" data-image="Images/Pacman3.png"></button>
+                    <button class="dot" data-image="Images/Pacman4.png"></button>
+                </div>
+            </div>
+
+            <div class="project-details-info">
+                <h1 id="project-title">Unity Pac-Man Game</h1>
+
+                <p id="project-category"><strong>Category:</strong> Game Development</p>
+                <p id="project-technologies"><strong>Technologies:</strong> Unity / C#</p>
+
+                <h2>Project Description</h2>
+
+                <p id="project-description">
+                    A Unity project built during my software development training.
+                    This project helped me practice game logic, level design,
+                    player interaction, and C# development.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const project = params.get("project");
+        const projectTitle = document.getElementById("project-title");
+        const projectCategory = document.getElementById("project-category");
+        const projectTechnologies = document.getElementById("project-technologies");
+        const projectDescription = document.getElementById("project-description");
+        const projectSlide = document.getElementById("project-slide");
+        const dots = document.querySelectorAll(".project-dots .dot");
+
+
+        if (project === "unreal-live") {
+            projectTitle.textContent = "Unreal Engine Live Project";
+            projectCategory.innerHTML = "<strong>Category:</strong> Game Development";
+            projectTechnologies.innerHTML = "<strong>Technologies:</strong> Unreal Engine / Blueprints";
+            projectDescription.textContent =
+                "An Unreal Engine project built during my software development training. This project gave me hands-on experience with level design, gameplay logic, pickups, UI elements, and Blueprint development.";
+            const unrealImages = [
+                "Images/Sandbox-game.png",
+                "Images/Unreal-pro.png",
+                "Images/Unreal-proj.png",
+                "Images/Unreal-proj-1.png"
+            ];
+            projectSlide.src = unrealImages[0];
+
+            dots.forEach((dot, index) => {
+                dot.dataset.image = unrealImages[index];
+            });
+        }
+
+        if (project === "planetary-unity") {
+            projectCategory.innerHTML = "<strong>Category:</strong> Game Development";
+            projectTitle.textContent = "Planetary Unity Project";
+            projectTechnologies.innerHTML = "<strong>Technologies:</strong> Unity / C#";
+            projectDescription.textContent =
+                "A Unity project where I explored planetary environments and practiced C# scripting, game mechanics, and interactive development.";
+            const planetaryImages = [
+                "Images/Planetary-Unity.png"
+            ];
+            projectSlide.src = planetaryImages[0];
+            document.querySelector(".project-dots").style.display = "none";
+        }
+
+        if (project === "cinema-website") {
+            projectTitle.textContent = "Cinema Website";
+            projectCategory.innerHTML = "<strong>Category:</strong> Web Development";
+            projectTechnologies.innerHTML = "<strong>Technologies:</strong> HTML / CSS / JavaScript";
+            projectDescription.textContent =
+                "A responsive cinema-themed website built with HTML, CSS, and JavaScript. This project helped me practice webpage layout, styling, navigation, and interactive front-end development.";
+
+            const cinemaImages = [
+                "Images/Cinemas-site.png"
+            ];
+            projectSlide.src = cinemaImages[0];
+            document.querySelector(".project-dots").style.display = "none";
+        }
+
+        if (project === "first-unity-game") {
+            projectTitle.textContent = "First Unity Game";
+            projectCategory.innerHTML = "<strong>Category:</strong> Game Development";
+            projectTechnologies.innerHTML = "<strong>Technologies:</strong> Unity / C#";
+            projectDescription.textContent =
+                "My first Unity game project, where I practiced building a playable environment, working with game objects, basic mechanics, and C# scripting.";
+
+            const firstUnityImages = [
+                "Images/1st game-Unity.png"
+            ];
+
+            projectSlide.src = firstUnityImages[0];
+            document.querySelector(".project-dots").style.display = "none";
+        }
+
+        if (project === "maze-project") {
+            projectTitle.textContent = "Maze Project";
+            projectCategory.innerHTML = "<strong>Category:</strong> Software Development";
+            projectTechnologies.innerHTML = "<strong>Technologies:</strong> Programming";
+            projectDescription.textContent =
+                "A programming project where I practiced problem-solving, logic, and building a maze-based application.";
+
+            const mazeImages = [
+                "Images/maze-proj.png"
+            ];
+
+            projectSlide.src = mazeImages[0];
+            document.querySelector(".project-dots").style.display = "none";
+        }
+
+        dots.forEach((dot) => {
+            dot.addEventListener("click", () => {
+                projectSlide.src = dot.dataset.image;
+
+                dots.forEach((item) => {
+                    item.classList.remove("active");
+                });
+
+                dot.classList.add("active");
+            });
+        });
+        let currentSlide = 0;
+        if (project !== "planetary-unity" && project !== "cinema-website" && project !== "first-unity-game" && project !== "maze-project") {
+            setInterval(() => {
+                currentSlide++;
+
+                if (currentSlide >= dots.length) {
+                    currentSlide = 0;
+                }
+
+                projectSlide.src = dots[currentSlide].dataset.image;
+
+                dots.forEach((dot) => {
+                    dot.classList.remove("active");
+                });
+
+                dots[currentSlide].classList.add("active");
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>
